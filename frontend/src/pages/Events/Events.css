@@ -1,0 +1,48 @@
+/* src/pages/Events.css */
+
+/* Overall page styling */
+.events-page {
+    background-color: #f8f9fa;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  /* Carousel styling for top events */
+  .carousel-img {
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  /* Section headings */
+  .top-events-section h2,
+  .upcoming-events-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* List group styling for upcoming events */
+  .list-group-item {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    background: #fff;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  .list-group-item:hover {
+    background: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .top-events-section h2,
+    .upcoming-events-section h2 {
+      font-size: 1.8rem;
+    }
+    .carousel-img {
+      height: 200px;
+    }
+  }
+  

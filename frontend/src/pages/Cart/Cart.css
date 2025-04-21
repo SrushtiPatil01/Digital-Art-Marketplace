@@ -1,0 +1,203 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .cart-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  
+  
+  .cart-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    padding: 5rem 3rem 3rem 3rem;
+    background-color: #f9f9f9;
+  }
+  
+  
+  .cart-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    flex: 1;
+    padding-bottom: 2rem;
+  }
+  
+  
+  .cart-left {
+    flex: 2;
+  }
+  
+  .cart-right {
+    flex: 1;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  .cart-item-card {
+    display: flex;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  
+  .cart-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 1rem;
+    border-radius: 8px;
+  }
+  
+  .cart-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .checkout-button {
+    background-color: #0066ff !important;
+    color: #fff !important;
+    width: 100%;
+    padding: 0.75rem;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s ease;
+  }
+  
+  .checkout-button:hover {
+    background-color: #004bcc;
+  }
+  
+  .checkout-benefits {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.5rem;
+  }
+  
+  .checkout-benefits li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .promo-input {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .section-title {
+    margin-bottom: 1rem;
+  }
+  .order-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+    padding: 24px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 100px;
+  }
+  
+  .cart-promo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  
+  .promo-error {
+    color: red;
+    margin-top: 0.4rem;
+    font-size: 0.875rem;
+  }
+  
+  
+  .cart-promo .MuiButton-root {
+    padding: 0.6rem 1.2rem;
+    min-width: auto;
+    width: 20rem;
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 960px) {
+    /* Turn your two‑column Grid into one column */
+    .cart-container {
+      flex-direction: column !important;
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+  
+    /* Let both sides go full‑width */
+    .cart-left,
+    .cart-right {
+      width: 100%;
+    }
+  
+    /* Remove the sticky behavior so summary scrolls naturally */
+    .order-summary {
+      position: static;
+      top: auto;
+    }
+  
+    /* Tighter spacing on wrapper */
+    .cart-wrapper {
+      padding: 3rem 1.5rem 1.5rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    /* Even less padding on the page */
+    .cart-wrapper {
+      padding: 2rem 1rem 1rem;
+    }
+  
+    /* Shrink your artwork thumbnails */
+    .cart-image {
+      width: 70px;
+      height: 70px;
+      margin: 0.75rem;
+    }
+  
+    /* Scale down text & buttons */
+    .cart-item-card .MuiTypography-root,
+    .checkout-button {
+      font-size: 0.9rem !important;
+    }
+    .checkout-button {
+      padding: 0.5rem !important;
+    }
+  
+    .cart-actions {
+      gap: 0.25rem !important;
+    }
+
+    /* Collapse promo area to a column */
+    .cart-promo {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .cart-promo .MuiButton-root {
+      width: 100%;
+    }
+  }

@@ -1,0 +1,61 @@
+.marketplace-page {
+  background-color: #fefefe;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card styling for artworks */
+.artwork-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+.artwork-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.artwork-card img {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-body {
+  text-align: center;
+  padding: 1rem;
+}
+
+.card-footer {
+  background-color: transparent;
+  border-top: 0;
+  padding: 0.5rem;
+}
+
+/* Search and filter input styling */
+input.form-control,
+select.form-select {
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+/* Modal improvements for advanced filters */
+.modal-header {
+  background-color: #f8f9fa;
+}
+.modal-footer .btn {
+  min-width: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .artwork-card img {
+    height: 200px;
+  }
+  .marketplace-page .container {
+    padding: 0 1rem;
+  }
+}

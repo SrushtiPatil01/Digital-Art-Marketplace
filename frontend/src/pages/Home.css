@@ -1,0 +1,163 @@
+/* src/pages/Home.css */
+
+/* Global resets (if not using a CSS reset already) */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background-attachment: fixed;
+  color: #010101d3;
+  padding: 6rem 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-buttons .hero-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.hero-buttons .hero-btn:hover {
+  opacity: 0.9;
+}
+
+.hero-img-container {
+  text-align: center;
+}
+
+.hero-img {
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* Featured Artworks Carousel */
+.featured-section {
+  background: #f8f9fa;
+  padding: 2rem 0;
+}
+
+.featured-carousel .carousel-img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.carousel-caption-custom {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* Trending Section */
+.trending-section {
+  background-color: #fff;
+  padding: 1.5rem 0;
+}
+
+.trending-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.trending-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+}
+
+.trending-marquee p {
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+/* Keyframes for marquee effect */
+@keyframes marquee {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* Artist Highlights */
+.artist-highlights {
+  background: linear-gradient(to bottom, #d7efff, #ffeeda);
+  padding: 2rem 0;
+}
+
+.artist-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.artist-card:hover {
+  transform: scale(1.05);
+}
+
+.artist-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .featured-carousel .carousel-img {
+    height: 250px;
+  }
+  .trending-title {
+    font-size: 1.5rem;
+  }
+  .artist-img {
+    width: 80px;
+    height: 80px;
+  }
+}

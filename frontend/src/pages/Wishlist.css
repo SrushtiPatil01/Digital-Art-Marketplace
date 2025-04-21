@@ -1,0 +1,58 @@
+.wishlist-container {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wishlist-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.wishlist-media {
+  object-fit: cover;
+  transition: scale 0.3s ease;
+}
+
+.wishlist-card:hover .wishlist-media {
+  transform: scale(1.05);
+}
+
+.wishlist-content {
+  text-align: center;
+  padding-bottom: 3rem; /* make room for the footer */
+}
+
+.wishlist-actions {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  padding: 4px;
+  transition: background 0.2s ease;
+}
+
+.wishlist-actions:hover {
+  background: rgba(255,255,255,1);
+}
+
+.wishlist-actions .MuiSvgIcon-root {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 600px) {
+  .wishlist-actions {
+    bottom: 4px;
+    right: 4px;
+  }
+}

@@ -1,0 +1,148 @@
+/* Global resets to remove default margins */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  /* Row container for two columns */
+  .login-content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* Left info section */
+  .info-section {
+    flex: 1;
+    margin-right: 2rem;
+    padding: 10rem 5rem;
+    color: #fff;
+  }
+  
+  /* Right login container */
+  .login-container {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  /* Card styling for the login form */
+  .login-card {
+    border-radius: 15px;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-in-out;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+  
+.form-label {
+  text-align: left;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Custom input styles */
+  .custom-input {
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .custom-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Custom button styling */
+  .custom-btn {
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .custom-btn:hover {
+    background-color: #0069d9;
+    transform: translateY(-2px);
+  }
+  
+  /* Custom link styling */
+  .custom-link {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .custom-link:hover {
+    color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .login-content-row {
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+  
+    .info-section {
+      /* shrink the overlay area */
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    
+    .info-section h1 {
+      font-size: 1.8rem;
+    }
+    .info-section p {
+      font-size: 1rem;
+    }
+  
+    .login-container {
+      max-width: 100%;
+      margin-top: 2rem;
+    }
+  }
+  
+  /* MOBILE: hide info‑panel, full‑width form */
+  @media (max-width: 576px) {
+    .info-section {
+      display: none;
+    }
+  
+    .login-container {
+      width: 100%;
+      padding: 0 1rem;
+    }
+  
+    .login-card {
+      margin: 0 auto;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+  
+    /* smaller form headers & inputs */
+    .card-title {
+      font-size: 1.5rem;
+    }
+    .custom-input {
+      font-size: 0.9rem;
+      padding: 0.5rem;
+    }
+    .custom-btn {
+      font-size: 0.95rem;
+      padding: 0.6rem 0;
+    }
+  }
+  
